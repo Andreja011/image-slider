@@ -3,10 +3,24 @@ const slides = document.querySelectorAll(".carousel-slides img");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const dots = document.querySelectorAll(".dot");
+const secondNumber = document.querySelector(`.second-num`);
+const firstNumber = document.querySelector(`.first-num`);
 let slideIndex = 0;
+let numOfPictures = slides.length;
+
+function showTotalImageNumber(numOfPictures) {
+  secondNumber.innerText = numOfPictures;
+}
+showTotalImageNumber(numOfPictures);
+
+function updateImageNumb(index) {
+  firstNumber.innerText = index;
+}
+updateImageNumb(slideIndex + 1);
 
 function showSlide(index) {
   slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+  updateImageNumb(index + 1);
 }
 
 function setActiveDot(index) {
