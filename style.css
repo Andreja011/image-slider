@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-slides img {
+  width: 100%;
+}
+
+.prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  transition: 0.6s ease;
+
+  display: flex;
+  align-items: center;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  transition: 0.6s ease;
+
+  display: flex;
+  align-items: center;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-nav span {
+  font-size: 24px;
+
+  width: auto;
+  height: 100%;
+  padding: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 1px solid #f00;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dots .active {
+  background-color: #f00;
+  scale: 1.75;
+  border: 1px solid white;
+  transition: all 0.6s ease-in-out;
+}
